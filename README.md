@@ -9,10 +9,9 @@ Dois meses depois e um total de 12 membros incorporados, a divisão já possuía
 Esse projeto, agora aberto ao publico é uma versão polida, contendo codigos e documentação das lições aprendidas durante essa fase inicial de estudos, que consistiu nos 6 primeiros meses de 2019 - No qual a equipe conseguiu fazer um primeiro protótipo funcional. 
 
 # Resultados
+[![](https://img.youtube.com/vi/QOEYtYBCpx0/0.jpg)](https://www.youtube.com/watch?v=QOEYtYBCpx0)
 
-[https://www.youtube.com/watch?v=QOEYtYBCpx0](https://www.youtube.com/watch?v=QOEYtYBCpx0)
-
-[https://www.youtube.com/watch?v=7U0QbVUJCPA](https://www.youtube.com/watch?v=7U0QbVUJCPA)
+[![](https://img.youtube.com/vi/7U0QbVUJCPA/0.jpg)](https://www.youtube.com/watch?v=7U0QbVUJCPA)
 
 # Objetivos e Filosofias
 
