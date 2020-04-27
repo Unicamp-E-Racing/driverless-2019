@@ -24,7 +24,7 @@ Algumas filosofias seguidas no desenvolvimento desse Software;
 
 # O Desafio
 
-![Portugues/Untitled.png](Portugues/Untitled.png)
+![res/Untitled.png](res/Untitled.png)
 
 Desenvolver um carro de Fórmula SAE autônomo, capaz de percorrer de formasegura e com alto desempenho uma pista delimitada por cones em ambos os lados.
 
@@ -32,11 +32,11 @@ Desenvolver um carro de Fórmula SAE autônomo, capaz de percorrer de formasegur
 
 - Jetson TX2
 
-![Portugues/Untitled%201.png](Portugues/Untitled%201.png)
+![res/Untitled%201.png](res/Untitled%201.png)
 
 - ZED Camera
 
-![Portugues/Untitled%202.png](Portugues/Untitled%202.png)
+![res/Untitled%202.png](res/Untitled%202.png)
 
 # O Software
 
@@ -44,7 +44,7 @@ Desenvolver um carro de Fórmula SAE autônomo, capaz de percorrer de formasegur
 
 Seguindo a filosofia e objetivos citados anteriomente, o software segue uma lógica bem simples que consiste na seguinte linha de processamento:
 
-![Portugues/minimalist_driverless.png](Portugues/minimalist_driverless.png)
+![res/minimalist_driverless.png](res/minimalist_driverless.png)
 
 ### Video
 
@@ -72,7 +72,7 @@ A interface com o carro é feita exclusivamente pela CAN bus, na qual o carro en
 
 A interface com a CAN foi feita através de um adaptador USB-CAN
 
-![Portugues/Untitled%203.png](Portugues/Untitled%203.png)
+![res/Untitled%203.png](res/Untitled%203.png)
 
 ### Interface com a câmera
 
@@ -160,7 +160,7 @@ Esse bloco de codigo deve ser customizado dependendo da aplicação, podendo ser
 
 Codigo auxiliar, que emula o carro utilizando um modelo cinematico de bicicleta, alem de emular as mensagens CAN e o atuador de steering.
 
-![Portugues/Untitled%204.png](Portugues/Untitled%204.png)
+![res/Untitled%204.png](res/Untitled%204.png)
 
 A simulação do tempo de resposta do atuador de steering permitiu a detecção de alguns problemas, que serão discutidos na seção seguinte.
 
@@ -168,13 +168,13 @@ A simulação do tempo de resposta do atuador de steering permitiu a detecção 
 
 Esse código auxilar simula a pipeline Video, utilizando um arquivo de contendo pontos [x,y] dos cones, há a implementação de erro de medida assim como falha(dropout).
 
-![Portugues/Untitled%205.png](Portugues/Untitled%205.png)
+![res/Untitled%205.png](res/Untitled%205.png)
 
 # Viewer
 
 Código auxiliar utilizado para desenhar informações do estado atual do carro na tela.
 
-![Portugues/Untitled%206.png](Portugues/Untitled%206.png)
+![res/Untitled%206.png](res/Untitled%206.png)
 
 Utilizado em conjuto com o Car Emulator e Vision Emulator
 

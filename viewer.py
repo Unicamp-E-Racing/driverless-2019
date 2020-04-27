@@ -12,7 +12,7 @@ def local_to_global(car, point):
   yn = ynew + car[1]
   return [xn, yn]
 
-viewer2d.init("driverless", "black")
+viewer2d.init("driverless", "white")
 def run(car,predicted_path, viewed_cones_blue, viewed_cones_yelow, middle_points,
         simulated_cones_blue=[],
         simulated_cones_yellow=[],
@@ -20,7 +20,7 @@ def run(car,predicted_path, viewed_cones_blue, viewed_cones_yelow, middle_points
     points = []
     cars = []
     lines = []
-    cars.append(Car(int(car[0][0]*VIEWER_SCALE),int(car[0][1]*VIEWER_SCALE),car[0][2], -car[0][3], color="white"))
+    cars.append(Car(int(car[0][0]*VIEWER_SCALE),int(car[0][1]*VIEWER_SCALE),car[0][2], -car[0][3], color="black"))
 
     for i, path in enumerate(reversed(predicted_path)):
         if i % 20 == 0:
