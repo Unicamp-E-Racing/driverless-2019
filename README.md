@@ -172,9 +172,9 @@ Esse código auxilar simula a pipeline Video, utilizando um arquivo de contendo 
 
 # Viewer
 
-Código auxiliar utilizado para desenhar informações do estado atual do carro na tela.
+Código auxiliar utilizado para desenhar informações do estado atual do carro na tela, nele é possível visualizar a posição dos cones em relação ao carro.
 
-![res/Untitled%206.png](res/Untitled%206.png)
+![res/1587991132.png](res/1587991132.png)
 
 Utilizado em conjuto com o Car Emulator e Vision Emulator
 
