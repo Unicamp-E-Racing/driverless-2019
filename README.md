@@ -58,6 +58,12 @@ Determinação do meio da pista e Target de steering;
 
 Comunicação com o carro;
 
+## Bibliotecas Utilizadas
+- [OPENCV](https://github.com/opencv/opencv)
+- [ZED SDK](https://github.com/stereolabs/zed-python-api)
+- [YOLO34Py](https://github.com/madhawav/YOLO3-4-Py)
+- [FSDVIEWER](https://github.com/jpvolt/fsdviewer)
+
 ## Interfaces
 
 ### Interface com o carro
