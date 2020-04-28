@@ -1,6 +1,6 @@
 # History
 
-In 2017, autonomous cars started making part of Formula SAE, the first one to create the competition was FSG (Germany), creating a new category in their competition. Based on the excelence that UNICAMP E-racing already had, the first ideas to get into this new category started.
+In 2017, autonomous cars started making part of Formula SAE, the first one to create the competition was [FSG (Germany)](https://www.formulastudent.de/fsg/), creating a new category in their competition. Based on the excelence that UNICAMP E-racing already had, the first ideas to get into this new category started.
 
 After another win on the national competition in 2018, UNICAMP E-racing got together to define the next steps, and that way the Artificial Intelligence division was created. Founded by four members, they had the objective of creating the first Driverless Formula SAE car of the Americas. A few months later and with a total of 12 members, the division had a complete roadmap to make this a reality.
 
@@ -21,7 +21,7 @@ Although there are many sofisticated mapping and control methods that have amazi
 The philosophies followed on the development:
 
 - [KISS](https://en.wikipedia.org/wiki/KISS_principle)
-- Minimalist Code
+- [Minimalist Code](http://inoutput.io/articles/development/code-minimalism-what-is-it-and-should-you-use-it)
 
 # Objective
 
@@ -31,11 +31,11 @@ Develop an autonomous Formula SAE, capable of going through a track delimited by
 
 # Hardware
 
-- Jetson TX2
+- [Jetson TX2](https://developer.nvidia.com/embedded/jetson-tx2)
 
 ![res/Untitled%201.png](res/Untitled%201.png)
 
-- ZED Camera
+- [ZED Camera](https://www.stereolabs.com/zed/)
 
 ![res/Untitled%202.png](res/Untitled%202.png)
 
@@ -119,11 +119,11 @@ Responsible for capturing the image from the camera, detecting cones on the imag
 
 ### Capture
 
-There are two capture modes, one using the ZED camera SDK and the other using the OpenCV library. The OpenCV method can be used to run on other cameras.
+There are two capture modes, one using the ZED camera SDK and the other using the [OpenCV](https://opencv.org/) library. The OpenCV method can be used to run on other cameras.
 
 ### Detection
 
-There's only one detection method, using the neural network YOLO.
+There's only one detection method, using the neural network [YOLO](https://pjreddie.com/darknet/yolo/).
 
 ### Cone position estimation
 
