@@ -2,7 +2,7 @@
 
 In 2017, autonomous cars started making part of Formula SAE, the first one to create the competition was [FSG (Germany)](https://www.formulastudent.de/fsg/), creating a new category in their competition. Based on the excelence that UNICAMP E-racing already had, the first ideas to get into this new category started.
 
-After another win on the national competition in 2018, UNICAMP E-racing got together to define the next steps, and that way the Artificial Intelligence division was created. Founded by four members, they had the objective of creating the first Driverless Formula SAE car of the Americas. A few months later and with a total of 12 members, the division had a complete roadmap to make this a reality.
+After another win on the national competition in 2018, UNICAMP E-racing got together to define the next steps, and that way the Artificial Intelligence division was created. Founded by four members, they had the objective of creating the first Driverless Formula SAE car of the Americas. A few months later and with a total of 12 members, the division had a [complete roadmap](https://drive.google.com/file/d/19Qg_tvMwz-ABgCfN-C2M-YMoP3ZLF_FX/view?usp=sharing) to make this a reality.
 
 This project, now open, is a polished version of the code that let to the first functional prototype. Here is the code and documentation of the lessons learning from that first year of development.
 
