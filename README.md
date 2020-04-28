@@ -1,36 +1,35 @@
-# História
+# History
 
-Os carros autônomos passaram a fazer parte da Formula SAE em 2017, primeiramente na Alemanha, com uma nova categoria da competição dedicada a eles. Explorando a expertise que a Unicamp E-Racing já possuía, as ideias de se incluir nesse novo espaço já estavam surgindo.
+In 2017, autonomous cars started making part of Formula SAE, the first one to create the competition was FSG (Germany), creating a new category in their competition. Based on the excelence that UNICAMP E-racing already had, the first ideas to get into this new category started.
 
-Depois de mais uma vitória no campeonato nacional, em 2018, a Unicamp E-Racing se reuniu para estruturar as novas metas para o próximo ano. Nesse contexto, querendo levar o desenvolvimento das tecnologias da equipe para o patamar autônomo, quatro membros com grande ambição fundaram a Inteligência Artificial para criar o primeiro Fórmula SAE Driverless das Américas.
+After another win on the national competition in 2018, UNICAMP E-racing got together to define the next steps, and that way the Artificial Intelligence division was created. Founded by four members, they had the objective of creating the first Driverless Formula SAE car of the Americas. A few months later and with a total of 12 members, the division had a complete roadmap to make this a reality.
 
-Dois meses depois e um total de 12 membros incorporados, a divisão já possuía um roadmap completo para viabilizar esse desafio e iniciou seus trabalhos.
+This project, now open, is a polished version of the code that let to the first functional prototype. Here is the code and documentation of the lessons learning from that first year of development.
 
-Esse projeto, agora aberto ao publico é uma versão polida, contendo codigos e documentação das lições aprendidas durante essa fase inicial de estudos, que consistiu nos 6 primeiros meses de 2019 - No qual a equipe conseguiu fazer um primeiro protótipo funcional. 
 
-# Resultados
+# Results
 
 [![E-Racing Driverless](https://img.youtube.com/vi/QOEYtYBCpx0/0.jpg)](https://youtu.be/QOEYtYBCpx0)
 
 
 [![E-Racing Driverless Test](https://img.youtube.com/vi/7U0QbVUJCPA/0.jpg)](https://youtu.be/7U0QbVUJCPA)
 
-# Objetivos e Filosofias
+# Philosophy
 
-Por mais que existam metodos de mapeamento e controle sofisticados, optou-se em primeiro momento por adotar a ideia mais simples possivel, para poder assim entender quais areas precisariam de maior complexidade e estudo; o objetivo foi ter um protótipo funcional mais rapido possivel.
+Although there are many sofisticated mapping and control methods that have amazing results, it was decided to take the simplest approach possible. That way the team could figure which areas required more attention and allowed us to get a working prototype as fast as possible.
 
-Algumas filosofias seguidas no desenvolvimento desse Software;
+The philosophies followed on the development:
 
 - [KISS](https://en.wikipedia.org/wiki/KISS_principle)
 - Minimalist Code
 
-# O Desafio
+# Objective
 
 ![res/Untitled.png](res/Untitled.png)
 
-Desenvolver um carro de Fórmula SAE autônomo, capaz de percorrer de formasegura e com alto desempenho uma pista delimitada por cones em ambos os lados.
+Develop an autonomous Formula SAE, capable of going through a track delimited by cones on both sides, in a safe, but high-performance way.
 
-# O Hardware
+# Hardware
 
 - Jetson TX2
 
@@ -40,25 +39,25 @@ Desenvolver um carro de Fórmula SAE autônomo, capaz de percorrer de formasegur
 
 ![res/Untitled%202.png](res/Untitled%202.png)
 
-# O Software
+# Software
 
-## Resumo
+## Summary
 
-Seguindo a filosofia e objetivos citados anteriomente, o software segue uma lógica bem simples que consiste na seguinte linha de processamento:
+The software follows a very simple logic, that is based on the following pipeline:
 
 ![res/minimalist_driverless.png](res/minimalist_driverless.png)
 
 ### Video
 
-Processamento de imagem e detecção dos cones;
+Image processing and cone detection;
 
 ### Controller
 
-Determinação do meio da pista e Target de steering;
+Find the middle of the track and steering target;
 
-### Can Interface
+### CAN Interface
 
-Comunicação com o carro;
+Communication with the car;
 
 ## Bibliotecas Utilizadas
 - [OPENCV](https://github.com/opencv/opencv)
@@ -68,132 +67,132 @@ Comunicação com o carro;
 
 ## Interfaces
 
-### Interface com o carro
+### Car Interface
 
-A interface com o carro é feita exclusivamente pela CAN bus, na qual o carro envia informaçoes como velocidade e recebe comandos como Target de Steering.
+The car interface is made through a CAN bus. There the car sends feedback like speed, and receives commands as target steering and target speed.
 
-A interface com a CAN foi feita através de um adaptador USB-CAN
+The interface with the CAN bus was made through an USB-CAN adaptor.
 
 ![res/Untitled%203.png](res/Untitled%203.png)
 
-### Interface com a câmera
+### Camera Interface
 
-A Camera utilizada possui uma interface USB3.0, que era conectada diretamente a placa de processamento central(Jetson TX2);
+The used camera has a USB 3.0 interface, that is connected directly on the processing board (Jetson TX2);
 
-## Opções de operação
+## Operation options
 
-Uma das principais funcionalidades do software é a operação em diferentes modos, podendo ser tirar certos componentes e simula-los separadamente, facilitando assim a otimização de parametros e a procura de erros.
+One of the main functionalities is mode selection, being able to isolate some parts of the system and simulate them separetly, making it easier to optimize parameters and to find errors.
 
 ### Vision Simulation
 
-Nesse modo, toda pipeline de visão, é substituida por uma emulação utilizando um arquivo de pista, simulando assim a detecção dos cones. Tem grande utilidade para testar diferentes estratégias de controle.
+In that mode, all the vision pipeline is substituted using a track file, that way simulating the cone detection. This mode is good for testing control strategies.
 
 ### Car Simulation
 
-Utilizada para simular o comportamento do carro, utilizando um modelo cinematico simples ( modelo de bicicleta);  A comunicação com essa simulação é feita atraves de uma CAN virtual, assim o restante do comportamento do software permanece inalterado. 
+It simulates the car's behavior using a simple cinematic model (bicycle model). The communication with the simulation is made through a Virtual CAN, that way the behavior of the rest of the software don't need to change.
 
-### Can read
+### CAN read
 
-Com essa opção ativada, o software alem de escrever, lê informações do barramento CAN, utilizado principalmente para debug, uma vez que as informaçoes lidas não eram utilizadas para o controle do carro.
+This option enables the reading of CAN messages instead of only writing as in the default mode. This is helpful for debugging as the read values aren't used in the control algorithm.
 
-# Arquivo de constantes
+# Constants file
 
-Todas as constantes utilizadas estão concentradas em um unico arquivo (constants.py); Essas constantes mudam de diversas formas a operação do software; As principais constantes serão explicadas abaixo:
+All the constants used are in one file (contants.py) for simplicity. These constants change the behavior of the algorithms and the main ones are explained below:
 
 ```python
-SHOW_IMG = False  # Mostra janela com imagem da camera e cones detectados
-SHOW_VIEWER = True  # Mostra vizualisador topdown com cones e carro.
-RUN_FLAGS = ["CAN_READ", "CAR_SIMULATION", "VISION_SIMULATION"] # opçoes de operação
+SHOW_IMG = False  # Display a window with the camera image and detected cones
+SHOW_VIEWER = True  # Display a visualizer with a topdown view of the cones and the car
+RUN_FLAGS = ["CAN_READ", "CAR_SIMULATION", "VISION_SIMULATION"] # operation options
 ...
-CAPTURE_MODE = "ZED_SDK"  # ZED_SDK or OPENCV Modo de captura da imagem da camera
-FLIP_IMG = False  # inverte a imagem da camera se a camera foi montada de ponta cabeça
+CAPTURE_MODE = "ZED_SDK"  # ZED_SDK or OPENCV - The mode to be used to capture images from the camera
+FLIP_IMG = False  # Invert the camera image if the camera was mounted upside down
 ...
-MESURMENT_MODE = "STEREO"  # STEREO or MONO - Modo de medição da posição do cone
+MESURMENT_MODE = "STEREO"  # STEREO or MONO - Cone position estimation method
 ...
 ```
 
 # Video
 
-Bloco responsável por capturar a imagem da camera, detectar os cones na imagem e determinar a posição dos cones.
+Responsible for capturing the image from the camera, detecting cones on the image and estimating their positions.
 
-## Modos de operação
+## Operation Modes
 
-### Captura
+### Capture
 
-Possui dois modos de captura, utilizado o SDK da camera ZED, ou utilizado a biblioteca OPENCV, sendo o segundo metodo utilizado em testes utilizado diferentes cameras.
+There are two capture modes, one using the ZED camera SDK and the other using the OpenCV library. The OpenCV method can be used to run on other cameras.
 
-### Detecção
+### Detection
 
-Possui apenas um metodo de detecção, utilizado a rede neural YOLO
+There's only one detection method, using the neural network YOLO.
 
-### Medição
+### Cone position estimation
 
-Possui 2 modos de medição da posição dos cones. sendo eles
+There are two estimation methods. They are:
 
 - Mono
 
-    Utilizando informações prévias do tamanho do cone, utiliza-se a altura do cone na imagem para estimar sua distancia. é relativamente preciso para cones proximos.
+    Using previous information about cone size, the heigh of the bounding box is used to estimate its distance. Is relatively precise for cones nearby.
 
 - Stereo
 
-    Utilizando a imagem stereo da camera, calcula a posição 3d do cone em relação a camera
+    Using the stereo image from the camera, it calculates the cone's 3D position with respect to the camera.
 
 # Controller
 
-Duas diferentes logicas de controle foram utilizada e testadas. Todas elas buscam encontrar o meio da pista e em seguida determinar o angulo de esterçamento para manter o carro no meio da pista.
+Two different control logics were used and tested. Both estimate the middle of the track and then based on it calculate the steering angle to keep the car in the middle.
 
-Diversas constantes mudam drasticamente o comportamento do Controlador, tais constantes determinam limites e parametros que devem ser otimizados dependendo da pista e do carro.
+There are several constants that can drastically change the controller behavior. Those constants determine limits and parameters to be optimized depending on the car and the track.
 
 ## Controller 1
 
-Metodo simples, basicamente calcula a media da posição dos cones mais proximos do carro, fazendo checagens de colisão.
+Simple method, that basically find the average cone position for the closest cones and steer to it. It aditionally does collision checks.
 
 ## Controller 2
 
-Por meio de um algoritimo simples, encontra os pares de cones (azul + amarelo) e apartir deles computa o meio da pista.
+This method find cone pairs (blue + yellow) and gets the track middle from those pairs.
 
 # CAN Interface
 
-Interface CAN, envia e recebe mensagens na bus CAN do carro, tendo como principal papel codificar e decodificar essas mensagens. 
+The CAN Interface sends and receives messages in the car's CAN bus. It's main role is abstracting the coding and decoding of CAN messages.
 
-Esse bloco de codigo deve ser customizado dependendo da aplicação, podendo ser até mesmo totalmente substituido por outras formas de interface.
+This block should be custumized for the application, possibly to even completely changed by other forms of interface.
 
 # Car Emulator
 
-Codigo auxiliar, que emula o carro utilizando um modelo cinematico de bicicleta, alem de emular as mensagens CAN e o atuador de steering.
+Emulates the car using a cinematic bicycle model, emulate the CAN messages and the steering actuator.
 
 ![res/Untitled%204.png](res/Untitled%204.png)
 
-A simulação do tempo de resposta do atuador de steering permitiu a detecção de alguns problemas, que serão discutidos na seção seguinte.
+The simulation of actuator response time has helped the detection of a few problems in the software.
 
 # Vision Emulator
 
-Esse código auxilar simula a pipeline Video, utilizando um arquivo de contendo pontos [x,y] dos cones, há a implementação de erro de medida assim como falha(dropout).
+Emulates the vision pipeline using a file containing a track defined by [x,y] of all cones. It also include measurement error and dropout.
 
 ![res/Untitled%205.png](res/Untitled%205.png)
 
 # Viewer
 
-Código auxiliar utilizado para desenhar informações do estado atual do carro na tela, nele é possível visualizar a posição dos cones em relação ao carro.
+Shows car state and draw the topdown view of the car and the cones.
 
 ![res/1587991132.png](res/1587991132.png)
 
-Utilizado em conjuto com o Car Emulator e Vision Emulator
+Is used with the Car Emulator and Vision Emulator.
 
-# Problemas e possiveis melhorias
+# Problems and possible improvements
 
-## Tempo de resposta do atuador
+## Actuator response time
 
-O tempo de resposta do atuador, que não foi levado em consideração no software, impossibilita o aumento da velocidade de navegação;
+The actuator response time has not been taken into account in this software, making it hard to increase max speed.
 
-## Velocidade de detecção
+## Cone Detection Speed
 
-Outros metodos de deteção dos cones na imagem podem ser implementados para melhorar a latência do sistema;
+Other cone detection method may be implemented to improve the latency of the system.
 
-## Mapeamento
+## Mapping
 
-Desenvolver algoritimos de mapeamento, permitindo assim tomadas de decissões  com uma janela de tempo maior;
+Adding a mapping module, making it possible to make the decisions on a longer period.
 
-## Controle de velocidade
+## Speed control
 
-Desenvolver controle de velocidade do carro, em busca de melhores tempos de volta;
+Adding speed control to the Controller should help with lap times.
