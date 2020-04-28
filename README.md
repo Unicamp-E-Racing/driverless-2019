@@ -59,11 +59,12 @@ Find the middle of the track and steering target;
 
 Communication with the car;
 
-## Bibliotecas Utilizadas
+## Libraries Used (and a useful repository)
 - [OPENCV](https://github.com/opencv/opencv)
 - [ZED SDK](https://github.com/stereolabs/zed-python-api)
 - [YOLO34Py](https://github.com/madhawav/YOLO3-4-Py)
 - [FSDVIEWER](https://github.com/jpvolt/fsdviewer)
+- [FSOCO](https://github.com/ddavid/fsoco)
 
 ## Interfaces
 
