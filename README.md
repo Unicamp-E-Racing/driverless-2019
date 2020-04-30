@@ -1,3 +1,5 @@
+[Documentation in Portuguese](https://github.com/Unicamp-E-Racing/driverless-2019/blob/master/README_PT.md)
+
 # History
 
 In 2017, autonomous cars started making part of Formula SAE, the first one to create the competition was [FSG (Germany)](https://www.formulastudent.de/fsg/), creating a new category in their competition. Based on the excelence that UNICAMP E-racing already had, the first ideas to get into this new category started.
