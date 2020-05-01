@@ -11,8 +11,11 @@ This project, now open, is a polished version of the code that let to the first 
 
 # Results
 
+https://youtu.be/QOEYtYBCpx0
+
 [![E-Racing Driverless](https://img.youtube.com/vi/QOEYtYBCpx0/0.jpg)](https://youtu.be/QOEYtYBCpx0)
 
+https://youtu.be/7U0QbVUJCPA
 
 [![E-Racing Driverless Test](https://img.youtube.com/vi/7U0QbVUJCPA/0.jpg)](https://youtu.be/7U0QbVUJCPA)
 
