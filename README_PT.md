@@ -1,3 +1,5 @@
+[Documentation in English](https://github.com/Unicamp-E-Racing/driverless-2019/blob/master/README.md)
+
 # História
 
 Os carros autônomos passaram a fazer parte da Fórmula SAE em 2017, primeiramente na Alemanha, com uma nova categoria da competição dedicada a eles. Explorando a expertise que a Unicamp E-Racing já possuía, as ideias de se incluir nesse novo espaço já estavam surgindo.
@@ -10,8 +12,12 @@ Esse projeto, agora aberto ao público é uma versão polida, contendo códigos 
 
 # Resultados
 
+https://youtu.be/QOEYtYBCpx0
+
 [![E-Racing Driverless](https://img.youtube.com/vi/QOEYtYBCpx0/0.jpg)](https://youtu.be/QOEYtYBCpx0)
 
+
+https://youtu.be/7U0QbVUJCPA
 
 [![E-Racing Driverless Test](https://img.youtube.com/vi/7U0QbVUJCPA/0.jpg)](https://youtu.be/7U0QbVUJCPA)
 
